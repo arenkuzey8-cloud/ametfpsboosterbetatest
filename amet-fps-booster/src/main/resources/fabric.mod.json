@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "ametfpsbooster",
+  "version": "${version}",
+  "name": "Amet Fps Booster",
+  "description": "Sadece FPS odakli. Sag Shift ile menu: Dengeli / Max / EXTREME boost, adaptif render distance, arka plan limiti.",
+  "authors": ["Amet"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.ametfps.AmetFpsClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "recommends": {
+    "sodium": "*",
+    "lithium": "*",
+    "ferritecore": "*",
+    "immediatelyfast": "*",
+    "entityculling": "*"
+  }
+}
