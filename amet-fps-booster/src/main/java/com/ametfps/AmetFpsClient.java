@@ -25,7 +25,6 @@ public class AmetFpsClient implements ClientModInitializer {
         MENU_KEY = KeyMappingHelper.registerKeyMapping(new KeyMapping(
             "key.ametfpsbooster.menu", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT_SHIFT, category));
 
-        // Kayitli ayarlari oyun tamamen acildiktan sonra uygula (options hazir olsun).
         ClientLifecycleEvents.CLIENT_STARTED.register(mc -> {
             for (Module m : Modules.ALL) m.setState(Config.savedState(m.id), false);
         });
@@ -38,7 +37,7 @@ public class AmetFpsClient implements ClientModInitializer {
         Booster.tick(mc);
         if (mc.player == null) return;
         while (MENU_KEY.consumeClick()) {
-            mc.gui.setScreen(new AmetMenuScreen());
+            mc.setScreen(new AmetMenuScreen());
         }
     }
 }
